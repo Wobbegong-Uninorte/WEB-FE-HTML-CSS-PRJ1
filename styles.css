@@ -37,6 +37,10 @@ header nav ul li a {
 
 main {
   padding: 1rem;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+  background-size: 10px 10px;
 }
 
 .promocionales img {
@@ -52,7 +56,7 @@ main {
 }
 
 .destacados .producto {
-  background: linear-gradient(to bottom, #000000, #47598d, #8093e4, #c6d2ff);
+  background: linear-gradient(to bottom, #FFFFFF, #533DE6, #523CE0, #5536B9, #4B36BA, #3B2782);
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
@@ -110,18 +114,18 @@ main {
 
 .destacados .producto .precio-normal {
   text-decoration: line-through;
-  color: #47598d;
+  color: #7e68ad;
 }
 
 .destacados .producto .precio-descuento {
-  color: #192641;
+  color: #FFFFFF;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .destacados .producto .precio-descuento span {
   font-size: 0.9rem;
-  color: #47598d;
+  color: #cd2abf;
 }
 
 .destacados .producto button {
@@ -145,7 +149,7 @@ main {
 .destacados .producto:nth-child(4n+2),
 .destacados .producto:nth-child(4n+3),
 .destacados .producto:nth-child(4n+4) {
-  background: linear-gradient(to bottom, #676767, #47598d, #8093e4, #c6d2ff);
+  background: linear-gradient(to bottom, #FFFFFF, #533DE6, #523CE0, #5536B9, #4B36BA, #3B2782);
 }
 
 .banner-publicitario img {
