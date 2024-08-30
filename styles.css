@@ -1,109 +1,162 @@
 html, body {
-    margin: 0;
-    padding: 0;
-  }
-
+  margin: 0;
+  padding: 0;
+}
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
 header, footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
 }
 
 header nav ul {
-    list-style: none;
+  list-style: none;
 }
 
 header nav ul li {
-    display: inline;
-    margin: 0 15px;
+  display: inline;
+  margin: 0 15px;
 }
 
 header nav ul li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 main {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .promocionales img {
-    width: 100%;
-    margin-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .destacados {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Cambiado a 4 columnas */
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin: 2rem 0;
 }
 
 .destacados .producto {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #000000, #47598d, #8093e4, #c6d2ff);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.destacados .producto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, 
+    rgba(255,255,255,0.9) 0%,
+    rgba(255,255,255,0.7) 20%,
+    rgba(255,255,255,0.5) 40%,
+    rgba(255,255,255,0.3) 60%,
+    rgba(255,255,255,0.1) 80%,
+    rgba(255,255,255,0) 100%
+  );
+  z-index: 1;
+}
+
+.destacados .producto > * {
+  position: relative;
+  z-index: 2;
 }
 
 .destacados .producto img {
-    width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: auto;
+  flex-grow: 1;
+}
+
+.destacados .producto-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .destacados .producto h2 {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #000000;
 }
 
 .destacados .producto .precio-normal {
-    text-decoration: line-through;
-    color: #888;
+  text-decoration: line-through;
+  color: #47598d;
 }
 
 .destacados .producto .precio-descuento {
-    color: #e74c3c;
-    font-weight: bold;
+  color: #192641;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .destacados .producto .precio-descuento span {
-    font-size: 0.9rem;
-    color: #c0392b;
+  font-size: 0.9rem;
+  color: #47598d;
 }
 
 .destacados .producto button {
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #2ecc71;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #000000;
+  color: #c6d2ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.destacados .producto button:hover {
+  background-color: #192641;
+  color: #ffffff;
+}
+
+/* Ajustes para las filas */
+.destacados .producto:nth-child(4n+1),
+.destacados .producto:nth-child(4n+2),
+.destacados .producto:nth-child(4n+3),
+.destacados .producto:nth-child(4n+4) {
+  background: linear-gradient(to bottom, #676767, #47598d, #8093e4, #c6d2ff);
 }
 
 .banner-publicitario img {
-    width: 100%;
-    margin-top: 2rem;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .destacados {
-      grid-template-columns: 1fr; /* 1 columna en pantallas medianas */  /*repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+      grid-template-columns: 1fr; /* 1 columna en pantallas medianas */
   }
 }
 
