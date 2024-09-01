@@ -362,7 +362,7 @@ html, body {
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1001;
-    pointer-events: none; /*el overlay no interfiera con los clics en los elementos debajo de él.*/
+    pointer-events:none; /*el overlay no interfiera con los clics en los elementos debajo de él.*/
   }
 
   /* estilos para la ventana emergente de filtros */
@@ -377,11 +377,14 @@ html, body {
     box-shadow: 2px 0 5px rgba(0,0,0,0.5);
     transition: left 0.3s ease;
     z-index: 1002;
+    overflow-y: auto;
+    scrollbar-width: none;
   }
 
   /* Muestra los filtros y la superposición cuando el checkbox está marcado */
   #toggle:checked ~ .overlay {
     opacity: 1;
+    pointer-events:all; 
   }
 
   #toggle:checked ~ .filtros {
