@@ -3,22 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>NovaMart</title>
 </head>
 <body>
-    
-    <!-- Header (Placeholder) -->
-    <header>
-        <h1>Logo del Sitio</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+
+        <div class="logo"></div>
+
+        <div class="center">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos">
+            </div>
+
+            <button type="submit"><img src="img/loupe.svg" alt=""></button>
+        </div>
+
+        <div class="links">
+            <a href="cart.html">
+                <img src="img/cart.svg" alt="">
+                <span>Carrito</span>
+            </a>
+            <a href="">
+                <img src="/img/user.svg" alt="">
+                <span>Mi Cuenta</span>
+            </a>
+        </div>
+
     </header>
+
+    <section class="subheader">
+        <nav>
+            <div class="menu-item">
+                <a href="plp.html">Tecnología</a>
+                <ul class="submenu">
+                    <li><a href="#">Computadores</a></li>
+                    <li><a href="#">Televisores</a></li>
+                    <li><a href="#">Audio</a></li>
+                    <li><a href="#">Video</a></li>
+                    <li><a href="#">Impresión</a></li>
+                    <li><a href="#">Cámaras</a></li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <a href="#">Electrodomésticos</a>
+                <ul class="submenu">
+                    <li><a href="#">Climatización</a></li>
+                    <li><a href="#">Refrigeración</a></li>
+                    <li><a href="#">Lavadoras/Secadoras</a></li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <a href="#">Celulares</a>
+                <ul class="submenu">
+                    <li><a href="#">Celulares</a></li>
+                    <li><a href="#">Tabletas</a></li>
+                    <li><a href="#">Smartwatch</a></li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <a href="#">Hogar</a>
+                <ul class="submenu">
+                    <li><a href="#">Salas</a></li>
+                    <li><a href="#">Comedor</a></li>
+                    <li><a href="#">Cocina</a></li>
+                    <li><a href="#">Baño</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
 
     <!-- Contenido Central -->
     <main>
@@ -123,8 +177,84 @@
     </main>
 
     <!-- Footer (Placeholder) -->
-    <footer>
-        <p>Placeholder para footer</p>
+    
+    <footer class="footer">
+        <div class="topf">
+            <div class="info">
+                <p>NovaMart</p>
+                <p>NIT: 123456789</p>
+            </div>
+    
+            <div class="contact">
+                <a href=""><img src="img/fb.svg" alt=""></a>
+                <a href=""><img src="img/ig.svg" alt=""></a>
+                <a href=""><img src="img/yt.svg" alt=""></a>
+            </div>
+
+            <div class="pays">
+                <a href=""><img src="img/bancolombia.png" alt=""></a>
+                <a href=""><img src="img/davivienda.png" alt=""></a>
+                <a href=""><img src="img/grupoaval.png" alt=""></a>
+                <a href=""><img src="img/mastercard.png" alt=""></a>
+                <a href=""><img src="img/nequi.png" alt=""></a>
+                <a href=""><img src="img/paypal.png" alt=""></a>
+                <a href=""><img src="img/pse.png" alt=""></a>
+                <a href=""><img src="img/visa.png" alt=""></a>
+            </div>
+        </div>
+        <div class="bottomf">
+            <div class="footer-column">
+                <h3>Nuestra Compañía</h3>
+                <ul>
+                <li><a href="#">Quiénes somos</a></li>
+                <li><a href="#">Nuestras tiendas</a></li>
+                <li><a href="#">Nuestras marcas</a></li>
+                <li><a href="#">Contáctenos</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+                <li><a href="#">Tarjeta de crédito Alkosto</a></li>
+                <li><a href="#">Certificados tributarios</a></li>
+                <li><a href="#">Rifas</a></li>
+                <li><a href="#">Fondo de empleados y cooperativas</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Compras en línea</h3>
+                <ul>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Pago seguro</a></li>
+                <li><a href="#">Métodos de envío</a></li>
+                <li><a href="#">Medios de pago</a></li>
+                <li><a href="#">Seguros</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Servicios</h3>
+                <ul>
+                <li><a href="#">Instalaciones</a></li>
+                <li><a href="#">Agendar servicio de instalación</a></li>
+                <li><a href="#">Garantía extendida</a></li>
+                <li><a href="#">Garantías y centros de servicios técnico</a></li>
+                <li><a href="#">Instalación de Llantas</a></li>
+                <li><a href="#">Consulta tu factura</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Políticas</h3>
+                <ul>
+                <li><a href="#">Términos y condiciones del canal digital</a></li>
+                <li><a href="#">Contrato de compraventa en línea</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Solicitud tratamiento de datos personales</a></li>
+                <li><a href="#">Política de cookies</a></li>
+                <li><a href="#">Política de cambios y devoluciones</a></li>
+                <li><a href="#">Código de ética</a></li>
+                <li><a href="#">Manual de normas SST para Terceros</a></li>
+                <li><a href="#">Línea ética</a></li>
+                <li><a href="#">Superintendencia de Industria y Comercio - SIC</a></li>
+                </ul>
+            </div>              
+        </div>
+       
     </footer>
 </body>
 </html>
