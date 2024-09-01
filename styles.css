@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-
-
 html, body {
     margin: 0;
     padding: 0;
@@ -30,7 +28,6 @@ html, body {
 
 /* BREADCRUMB
 /* ---------------------------------------- */
-
 .elementsBreadcrumb {
   flex-direction: row;
   list-style: none;
@@ -56,8 +53,6 @@ html, body {
 
 .primer-itemBreadcrumb {
   border-radius: 9px 0 0 9px;
-
-  
 }
 
 .ultimo-itemBreadcrumb {
@@ -68,7 +63,7 @@ html, body {
 }
 
 
-/* FILTRAR, ORDERNAR, INFO
+/* FILTER, SORT, INFO
 /* ---------------------------------------- */
 .accionesSeccion {
   box-sizing:border-box;
@@ -78,7 +73,6 @@ html, body {
 }
 
 .flex-acciones {
-
   flex-direction: column;
   color: #dcdcf5;
 
@@ -96,7 +90,7 @@ html, body {
 }
 
 
-/* LISTA DE PRODUCTOS 
+/*PRODUCT LIST
 /* ---------------------------------------- */
 .listaProductos {
   background-color: #e5e5f7  ;
@@ -104,7 +98,6 @@ html, body {
 
 
 .productos {
-  
   display: grid;
   grid-template-columns: 1fr; 
   grid-template-rows: repeat(10, auto); 
@@ -234,8 +227,7 @@ html, body {
 }
 
 
-
-/*CONTENEDOR DEL PRECIO SIN DESCUENTO*/
+/*CONTAINER OF THE NON-DISCOUNT PRICE*/
 .precio {
   margin-left: 4px;
   padding: 0;
@@ -262,7 +254,7 @@ html, body {
 }
 
 
-/*CONTENEDOR DE PRECIO CON DESCUENTO*/ 
+/*DISCOUNTED PRICE CONTAINER*/
 .contenedorDescuento {
   flex-direction: row;
   display: flex;
@@ -301,7 +293,7 @@ html, body {
 }
 
 
-/* ASIDE (BANNER PUBLICITARIO)
+/* ASIDE (BANNER ADVERTISING)
 /* ---------------------------------------- */
 .anuncioPublicitario {
   display: flex;
@@ -342,14 +334,7 @@ html, body {
 }
 
 
-
-
-
-
-
-
-
-/*ESTILOS PARA LA VENTANA EMERGENTE DE LOS FILTROS*/
+/*STYLES FOR THE FILTER POP-UP WINDOW*/
 .noDesplazamientoHorizontal {
   overflow-x: hidden;
 }
@@ -359,97 +344,80 @@ html, body {
     display: none;
   }
 
-  /* Botón para abrir los filtros */
-  .btn-open {
-    position: fixed;
-    top: 120px;
-    left: 41px;
-    padding: 10px 20px;
-    background-color: #131921;
-    color: white;
-    border: none;
-    cursor: pointer;
-    z-index: 1002;
-  }
+/* Button to open filters */
+.btn-open {
+  position: fixed;
+  top: 120px;
+  left: 41px;
+  padding: 10px 20px;
+  background-color: #131921;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+}
 
-  /* Superposición (overlay) */
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* fondo semitransparente para tapar el resto de la pagina*/
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1001;
-    pointer-events:none; /*el overlay no interfiera con los clics en los elementos debajo de él.*/
-  }
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);/* semi-transparent background to cover the rest of the page*/
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1001;
+  pointer-events:none; /*The overlay does not interfere with clicks on elements below it.*/
+}
 
-  /* estilos para la ventana emergente de filtros */
-  .filtros {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 22.7%;
-    height: calc(100% - 40px);
-    background-color: #2d1d6b;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
-    transition: left 0.3s ease;
-    z-index: 1002;
-    overflow-y: auto;
-    scrollbar-width: none;
-    color:#fff;
-  }
+/* styles for the filter popup */
+.filtros {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 22.7%;
+  height: calc(100% - 40px);
+  background-color: #2d1d6b;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  transition: left 0.3s ease;
+  z-index: 1002;
+  overflow-y: auto;
+  scrollbar-width: none;
+  color:#fff;
+}
 
-  .colorSubtitles {
-    color:#7c92ff
-  }
+.colorSubtitles {
+  color:#7c92ff
+}
 
-  /* Muestra los filtros y la superposición cuando el checkbox está marcado */
-  #toggle:checked ~ .overlay {
-    opacity: 1;
-    pointer-events:all; 
-  }
+/* Show filters and overlay when checkbox is checked */
+#toggle:checked ~ .overlay {
+  opacity: 1;
+  pointer-events:all; 
+}
 
-  #toggle:checked ~ .filtros {
-    left: 0;
-  }
+#toggle:checked ~ .filtros {
+  left: 0;
+}
 
-  /* estilos del botón de filtrar*/
-  .btn-filtrar {
-    width: 100%;
-    padding: 10px;
-    background-color: #131921;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
+/* filter button styles */
+.btn-filtrar {
+  width: 100%;
+  padding: 10px;
+  background-color: #131921;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
-  .separadorBotonFiltrar {
-    margin-bottom: 30px;
-  }
-
-
+.separadorBotonFiltrar {
+  margin-bottom: 30px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilos para dispositivos móviles */
+/* Styles for mobile devices */
 @media (max-width: 768px) {
   .productos {
     place-items: center;
@@ -533,13 +501,13 @@ html, body {
     color: #007185; 
   }
   
-  /*CONTENEDOR DEL PRECIO SIN DESCUENTO*/
+  /*CONTAINER OF THE NON-DISCOUNT PRICE*/
   .precio {
     margin-left: 4px;
     padding: 0;
     width: 100%;
     display: flex;
-    align-items: center; /* Alinea los elementos dentro de la misma línea */
+    align-items: center; 
   }
   
   .stylesCOP {
@@ -560,7 +528,7 @@ html, body {
   }
   
   
-  /*CONTENEDOR DE PRECIO CON DESCUENTO*/ 
+/*DISCOUNTED PRICE CONTAINER*/
   .prefijoDescuento {
     font-size: 0.25em;
   }
@@ -615,10 +583,8 @@ html, body {
     margin-right: 0.75em;
   }
   
-
-  /*ESTILOS PARA LA VENTANA EMERGENTE DE LOS FILTROS*/
-
-  /* Botón para abrir los filtros */
+/*STYLES FOR THE FILTER POP-UP WINDOW*/
+/* Button to open filters */
   .btn-open {
     padding:6px 19px 9px 3em;
     text-align:left;
@@ -629,21 +595,21 @@ html, body {
     left: 2px;
   }
 
-  /* Superposición (overlay) */
+/* Overlay */
   .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* fondo semitransparente para tapar el resto de la pagina*/
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background to cover the rest of the page*/
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1001;
-    pointer-events:none; /*el overlay no interfiera con los clics en los elementos debajo de él.*/
+    pointer-events:none; /*The overlay does not interfere with clicks on elements below it.*/
   }
 
-  /* estilos para la ventana emergente de filtros */
+/* styles for the filter popup */
   .filtros {
     position: fixed;
     top: 0;
@@ -660,7 +626,7 @@ html, body {
     font-size: 0.65em;
   }
 
-  /* Muestra los filtros y la superposición cuando el checkbox está marcado */
+/* Show filters and overlay when checkbox is checked */
   #toggle:checked ~ .overlay {
     opacity: 1;
     pointer-events:all; 
@@ -670,7 +636,7 @@ html, body {
     left: 0;
   }
 
-  /* estilos del botón de filtrar*/
+/* filter button styles */
   .btn-filtrar {
     width: 100%;
     padding: 10px;
@@ -684,56 +650,50 @@ html, body {
     margin-bottom: 30px;
   }
 
+  /* BREADCRUMB
+  /* ---------------------------------------- */
+  .elementsBreadcrumb {
+    align-self: center;
+    margin: 0.7em 0 0.7em 1.15em;
+    padding: 0;
+    flex-direction: row;
+    list-style: none;
+    width: 100%;
+    height: 80%;
+  }
 
-  
-/* BREADCRUMB
-/* ---------------------------------------- */
+  /* General breadcrumb styling */
+  .breadcrumb {
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+  }
 
-.elementsBreadcrumb {
-  align-self: center;
-  margin: 0.7em 0 0.7em 1.15em;
-  padding: 0;
-  flex-direction: row;
-  list-style: none;
-  width: 100%;
-  height: 80%;
-}
+  .primer-itemBreadcrumb,
+  .ultimo-itemBreadcrumb,
+  .intermedios-itemBreadcrumb {
+    position: relative;
+    background-color: #2d1c70;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.6em;
+  }
 
-/* General breadcrumb styling */
-.breadcrumb {
-  height: 100%;
-  width: 100%;
-  color: white;
-  display: flex;
-}
+  .primer-itemBreadcrumb {
+    border-radius: 9px 0 0 9px;
+  }
 
-.primer-itemBreadcrumb,
-.ultimo-itemBreadcrumb,
-.intermedios-itemBreadcrumb {
-  position: relative;
-  background-color: #2d1c70;
-  text-align: center;
-  font-weight: bold;
-  font-size: 0.6em;
-}
-
-.primer-itemBreadcrumb {
-  border-radius: 9px 0 0 9px;
-
-  
-}
-
-.ultimo-itemBreadcrumb {
-  box-sizing: border-box;
-  border-radius: 0 9px 9px 0;
-  border-left: 3px white solid;
-  color: #a793f7;
-}
-.video-anuncio {
-  object-position: 0 -0.3em;
-  width: 55%; 
-  height: 70%; 
-  object-fit: cover; 
-}
-
+  .ultimo-itemBreadcrumb {
+    box-sizing: border-box;
+    border-radius: 0 9px 9px 0;
+    border-left: 3px white solid;
+    color: #a793f7;
+  }
+  .video-anuncio {
+    object-position: 0 -0.3em;
+    width: 55%; 
+    height: 70%; 
+    object-fit: cover; 
+  }
 }

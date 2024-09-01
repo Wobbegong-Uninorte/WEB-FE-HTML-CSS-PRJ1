@@ -8,7 +8,10 @@
     <title>Lista de productos</title>
 </head>
 <body class="noDesplazamientoHorizontal">
+
+    
     <main class="flex flex-rows mainPLP fuenteGlobalPLP">
+        <!-- BREADCRUMB -->
         <section class="breadcrumb flex-breadcrumb">
             <ol class="elementsBreadcrumb flex">
                 <li class="primer-itemBreadcrumb">Home </li>
@@ -17,6 +20,9 @@
                 <li class="ultimo-itemBreadcrumb">Lista de productos</li>
             </ol>
         </section>
+
+
+        <!-- ORDER BY AND "X ITEMS OF Y" -->
         <section class="accionesSeccion flex">
             <div class="flex-acciones ">
                 <div>10 resultados de 1.832</div>
@@ -35,19 +41,16 @@
         </section>
 
 
-        <!-- VENTANA DESPLAZABLE -->
-
-        
-        <input type="checkbox" id="toggle"> <!-- Checkbox para controlar la ventana de filtros -->
+        <!-- SLIDING WINDOW -->
+        <input type="checkbox" id="toggle"> <!-- Checkbox to control the filter window -->
         <!-- Superposición (overlay) -->
         <div class="overlay" onclick="document.getElementById('toggle').checked = false;"></div>
-        <label for="toggle" class="btn-open">Filtros</label> <!-- Botón para abrir la ventana de filtros -->
-
+        <label for="toggle" class="btn-open">Filtros</label> <!-- Button to open the filters window-->
         <!-- Ventana de filtros -->
         <div class="filtros">
             <h3 class="colorSubtitles">Filtros</h3>
-            <div class="categoria"><!-- Aquí van las categorías y filtros -->
-                <!-- Categoría: Tecnología -->
+            <div class="categoria"><!-- list of categories and filters -->
+                <!--Technology -->
                 <div class="categoria">
                     <h4 class="colorSubtitles">Tecnología</h4>
                     <label>
@@ -76,7 +79,7 @@
                     </label>
                 </div>
             
-                <!-- Categoría: Electrodomésticos -->
+                <!--Household appliances -->
                 <div class="categoria">
                     <h4 class="colorSubtitles">Electrodomésticos</h4>
                     <label>
@@ -93,7 +96,7 @@
                     </label>
                 </div>
             
-                <!-- Categoría: Celulares -->
+                <!--Cell phones -->
                 <div class="categoria">
                     <h4 class="colorSubtitles">Celulares</h4>
                     <label>
@@ -110,7 +113,7 @@
                     </label>
                 </div>
             
-                <!-- Categoría: Hogar -->
+                <!--Household Items -->
                 <div class="categoria">
                     <h4 class="colorSubtitles">Hogar</h4>
                     <label>
@@ -131,12 +134,12 @@
                     </label>
                 </div>
         </div>
-        <!-- Botón para cerrar la ventana y aplicar filtros -->
+        <!--Button to close the window and apply filters-->
         <label for="toggle" class="btn-filtrar">Filtrar</label>
         </div>
-        <!-- FINALIZA IMPLEMENTACION DE VENTANA DESPLAZABLE -->
+        <!-- Implementation of scrollable window is complete -->
 
-
+        <!-- LIST OF PRODUCTS -->
         <section class="listaProductos flex">
             <ul class="productos">
                 <li class="flex">
@@ -353,6 +356,7 @@
                 </li>
             </ul>
         </section>
+        <!-- PRODUCT LIST ENDS-->
         <aside class="anuncioPublicitario">
             <video class="video-anuncio bannerAds video-anuncio" autoplay muted loop>
                 <source src="img/bannerPLP.mp4" type="video/mp4">
@@ -360,5 +364,7 @@
             </video>
         </aside>
     </main>
+
+
 </body>
 </html>
