@@ -8,16 +8,16 @@ html, body {
 }
 
 .mainPLP {
-  background-color: #0F0F0F;
+  background-color: #1C1C1C;
   width: 100%;
   height: 900px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2,  1fr);
-    grid-template-rows: repeat(22,  1fr);
+
+.flex-rows {
+  flex-direction: column;
 }
+
 
 
 /* BREADCRUMB
@@ -31,9 +31,8 @@ html, body {
   box-sizing: border-box;
   border-radius: 9px;
   color: white;
-  grid-row: 1/2;
-  grid-column: 1/3;
-  background-color: #1C1C1C;
+  background-color: #242f3d;
+
 }
 
 .primer-itemBreadcrumb{
@@ -57,8 +56,6 @@ html, body {
 /* FILTRAR, ORDERNAR, INFO
 /* ---------------------------------------- */
 .accionesSeccion {
-  grid-row: 2/4;
-  grid-column:1/3 ;
   background-color: #2C2C2C;
 }
 
@@ -67,15 +64,14 @@ html, body {
 /* LISTA DE PRODUCTOS 
 /* ---------------------------------------- */
 .listaProductos {
-  grid-row: 4/20;
-  grid-column:1/3 ;
-  background-color: #2C2C2C;
+  background-color: #ffffff  ;
 }
 
 .productos {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px; /* espacio entre las cajas que contienen los productos */
+  grid-template-columns: 1fr; /* Una sola columna */
+  grid-template-rows: repeat(10, auto); /* 10 filas automáticas */
+  gap: 20px; /* Espacio entre las cajas que contienen los productos */
   justify-content: center;
   padding: 0;
   margin: 14px;
@@ -83,31 +79,86 @@ html, body {
 }
 
 .productos li {
-  height: 280px;
-  background-color: #ababab;
-  text-align: center; 
-  padding: 20px;
+  margin-left: 130px;
+  border: 3px #f8f8f8 solid;
+  height: 295px;
+  background-color: #fff;
+  text-align: center;
   box-sizing: border-box;
 }
 
+.imagenProducto {
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 22%;
+  background-color: #f7f7f7;
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
+.flex:nth-child(1) .imagenProducto {
+  background-image: url("img/img1.svg");
+}
 
+.flex:nth-child(2) .imagenProducto {
+  background-image: url("img/img2.svg");
+}
+
+.flex:nth-child(3) .imagenProducto {
+  background-image: url("img/img3.svg");
+}
+
+.flex:nth-child(4) .imagenProducto {
+  background-image: url("img/img4.svg");
+}
+
+.flex:nth-child(5) .imagenProducto {
+  background-image: url("img/img5.svg");
+}
+
+.flex:nth-child(6) .imagenProducto {
+  background-image: url("img/img6.svg");
+}
+
+.flex:nth-child(7) .imagenProducto {
+  background-image: url("img/img7.svg");
+}
+
+.flex:nth-child(8) .imagenProducto {
+  background-image: url("img/img8.svg");
+}
+
+.flex:nth-child(9) .imagenProducto {
+  background-image: url("img/img9.svg");
+}
+
+.flex:nth-child(10) .imagenProducto {
+  background-image: url("img/img10.svg");
+}
+
+.tituloProducto {
+  color:#131921;
+  font-size: 16px;
+  text-align: left;
+  margin-left: 10px;
+}
 
 /* ASIDE (BANNER PUBLICITARIO)
 /* ---------------------------------------- */
 .anuncioPublicitario {
-  grid-row: 20/24;
-  grid-column:1/3 ;
   display: flex;
   background-color: #2C2C2C;
   justify-content: center;
   align-items: center;
+  height: 20%;
 }
 
 .bannerAds {
   position: relative;
   width: 100%; 
-  height: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,17 +166,12 @@ html, body {
 }
 
 .video-anuncio {
-  margin-bottom: 30px;
   object-position: 0 -30px;
   width: 55%; 
-  height: 100%; 
+  height: 70%; 
   object-fit: cover; 
 }
 
-.separador-banner {
-  width: 100%;
-  height: 20px;
-}
 
 /* ---------------------------------------- */
 
