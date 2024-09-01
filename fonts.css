@@ -1,0 +1,23 @@
+@font-face {
+    font-family:"NunitoRegular";
+    src:url("fonts/NunitoFont/NunitoSans_10pt-Regular.ttf") format("truetype");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family:"NunitoItalic"; 
+    src: url("fonts/NunitoFont/NunitoSans_10pt-Italic.ttf") format("truetype");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family:"NunitoBold";
+    src: url("fonts/NunitoFont/NunitoSans_10pt-Bold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family:"NunitoBoldItalic";
+    src:url("fonts/NunitoFont/NunitoSans_10pt-BoldItalic.ttf") format("truetype");
+    font-weight: 600;
+}
