@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
   }
 
+.fuenteGlobalPLP {
+    font-family: 'Nunito';
+}
+
 .sinLineaTexto {
   text-decoration: none;
 }
 
-.fuenteGlobalPLP {
-  font-family: "NunitoRegular";
-}
+
 
 .mainPLP {
   background-color: #382586;
