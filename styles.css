@@ -4,12 +4,16 @@ html, body {
     width: 100%;
   }
 
+.sinLineaTexto {
+  text-decoration: none;
+}
+
 .fuenteGlobalPLP {
   font-family: "NunitoRegular";
 }
 
 .mainPLP {
-  background-color: #1C1C1C;
+  background-color: #382586;
   width: 100%;
   height: 900px;
 }
@@ -23,32 +27,39 @@ html, body {
 
 .elementsBreadcrumb {
   flex-direction: row;
+  list-style: none;
+  margin-left: 10px;
 }
 
+/* General breadcrumb styling */
 .breadcrumb {
   box-sizing: border-box;
-  border-radius: 9px;
   color: white;
-  background-color: #2C2C2C;
-
+  display: flex;
 }
 
-.primer-itemBreadcrumb{
-  box-sizing: border-box;
-  margin-left: 40px;
+.primer-itemBreadcrumb,
+.ultimo-itemBreadcrumb,
+.intermedios-itemBreadcrumb {
+  position: relative;
+  padding: 12px 20px;
+  background-color: #2d1c70;
+  text-align: center;
+  font-weight: bold;
 }
 
-.ultimo-itemBreadcrumb{
-  box-sizing: border-box;
-  margin-left: 40px;
+.primer-itemBreadcrumb {
+  border-radius: 9px 0 0 9px;
 
+  
 }
 
-.intermedios-itemBreadcrumb{
-  box-sizing: border-box;
-  margin-left: 40px;
+.ultimo-itemBreadcrumb {
+  border-radius: 0 9px 9px 0;
+  margin-right: 40px;
+  border-left: 3px white solid;
+  color: #a793f7;
 }
-
 
 
 /* FILTRAR, ORDERNAR, INFO
@@ -57,12 +68,13 @@ html, body {
   box-sizing:border-box;
   padding-top: 0.9em;
   padding-left: 4em;
-  background-color: #242f3d;
+  background-color: #5142b0;
 }
 
 .flex-acciones {
+
   flex-direction: column;
-  color: #98ff98;
+  color: #dcdcf5;
 
 }
 
@@ -81,11 +93,12 @@ html, body {
 /* LISTA DE PRODUCTOS 
 /* ---------------------------------------- */
 .listaProductos {
-  background-color: #ffffff  ;
+  background-color: #e5e5f7  ;
 }
 
 
 .productos {
+  
   display: grid;
   grid-template-columns: 1fr; 
   grid-template-rows: repeat(10, auto); 
@@ -97,6 +110,7 @@ html, body {
 }
 
 .productos li {
+  border-radius: 12px;
   margin-left: 240px;
   margin-right: 130px;
   border: 3px #f8f8f8 solid;
@@ -177,7 +191,7 @@ html, body {
 
 .imagenPuntuacion4 {
   background-image: url("img/estrella4-0.svg");
-  width: 15%; 
+  width: 19%; 
   height: 45px; 
   padding: 0;
   background-size: 105%;
@@ -187,7 +201,7 @@ html, body {
 
 .imagenPuntuacion1 {
   background-image: url("img/estrella1-0.svg");
-  width: 15%; 
+  width: 19%; 
   height: 45px; 
   padding: 0;
   background-size: 105%;
@@ -197,7 +211,7 @@ html, body {
 
 .imagenPuntuacion2-5 {
   background-image: url("img/estrella2-5.svg");
-  width: 18%; 
+  width: 18.5%; 
   height: 45px; 
   padding: 0;
   background-size: 105%;
@@ -207,8 +221,9 @@ html, body {
 
 .valorPuntuacion {
   font-weight: bold;
-  font-size: 15px; 
-  margin-left: 4px; 
+  font-size: 13.5px; 
+  margin-left: 4px;
+  margin-top: 2px; 
   color: #007185; 
 }
 
@@ -268,7 +283,7 @@ html, body {
   margin-left: 3px;
   line-height: 12px;
   box-sizing: border-box;
-  background-color:#ffd814 ;
+  background-color: #00ddff ;
   color:#0f1111;
   border-radius: 10px;
   height: 35px;
@@ -284,7 +299,7 @@ html, body {
 /* ---------------------------------------- */
 .anuncioPublicitario {
   display: flex;
-  background-color: #2C2C2C;
+  background-color: #442da2;
   justify-content: center;
   align-items: center;
   height: 20%;
@@ -370,15 +385,20 @@ html, body {
     position: fixed;
     top: 0;
     left: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: #f9f9f9;
+    width: 22.7%;
+    height: calc(100% - 40px);
+    background-color: #2d1d6b;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.5);
     transition: left 0.3s ease;
     z-index: 1002;
     overflow-y: auto;
     scrollbar-width: none;
+    color:#fff;
+  }
+
+  .colorSubtitles {
+    color:#7c92ff
   }
 
   /* Muestra los filtros y la superposición cuando el checkbox está marcado */
@@ -395,11 +415,14 @@ html, body {
   .btn-filtrar {
     width: 100%;
     padding: 10px;
-    margin-top: 40px; /* Aumenta este valor para mover hacia abajo */
     background-color: #131921;
     color: white;
     border: none;
     cursor: pointer;
+  }
+
+  .separadorBotonFiltrar {
+    margin-bottom: 30px;
   }
 
 
@@ -553,7 +576,7 @@ html, body {
     margin-left: 3px;
     line-height: 0.95em;
     box-sizing: border-box;
-    background-color:#ffd814 ;
+    background-color:#00ddff ;
     color:#0f1111;
     border-radius: 10px;
     height: 3em;
@@ -586,7 +609,125 @@ html, body {
     margin-right: 0.75em;
   }
   
+
+  /*ESTILOS PARA LA VENTANA EMERGENTE DE LOS FILTROS*/
+
+  /* Botón para abrir los filtros */
+  .btn-open {
+    padding:6px 19px 9px 3em;
+    text-align:left;
+    font-size: 10px;
+    height: 1%;
+    width: 3%;
+    top: 120px;
+    left: 2px;
+  }
+
+  /* Superposición (overlay) */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* fondo semitransparente para tapar el resto de la pagina*/
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1001;
+    pointer-events:none; /*el overlay no interfiera con los clics en los elementos debajo de él.*/
+  }
+
+  /* estilos para la ventana emergente de filtros */
+  .filtros {
+    position: fixed;
+    top: 0;
+    left: -12.5em;
+    width: 22.7%;
+    height: calc(100% - 40px);
+    background-color: #2d1d6b;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(34, 23, 23, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1002;
+    overflow-y: auto;
+    scrollbar-width: none;
+    font-size: 0.65em;
+  }
+
+  /* Muestra los filtros y la superposición cuando el checkbox está marcado */
+  #toggle:checked ~ .overlay {
+    opacity: 1;
+    pointer-events:all; 
+  }
+
+  #toggle:checked ~ .filtros {
+    left: 0;
+  }
+
+  /* estilos del botón de filtrar*/
+  .btn-filtrar {
+    width: 100%;
+    padding: 10px;
+    background-color: #131921;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .separadorBotonFiltrar {
+    margin-bottom: 30px;
+  }
+
+
+  
+/* BREADCRUMB
+/* ---------------------------------------- */
+
+.elementsBreadcrumb {
+  align-self: center;
+  margin: 0.7em 0 0.7em 1.15em;
+  padding: 0;
+  flex-direction: row;
+  list-style: none;
+  width: 100%;
+  height: 80%;
 }
 
+/* General breadcrumb styling */
+.breadcrumb {
+  height: 100%;
+  width: 100%;
+  color: white;
+  display: flex;
+}
 
+.primer-itemBreadcrumb,
+.ultimo-itemBreadcrumb,
+.intermedios-itemBreadcrumb {
+  position: relative;
+  background-color: #2d1c70;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.6em;
+}
 
+.primer-itemBreadcrumb {
+  border-radius: 9px 0 0 9px;
+
+  
+}
+
+.ultimo-itemBreadcrumb {
+  box-sizing: border-box;
+  border-radius: 0 9px 9px 0;
+  border-left: 3px white solid;
+  color: #a793f7;
+}
+.video-anuncio {
+  object-position: 0 -0.3em;
+  width: 55%; 
+  height: 70%; 
+  object-fit: cover; 
+}
+
+}
