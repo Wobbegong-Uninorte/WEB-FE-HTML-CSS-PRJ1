@@ -80,6 +80,7 @@ html, body {
 
 .productos li {
   margin-left: 130px;
+  margin-right: 130px;
   border: 3px #f8f8f8 solid;
   height: 295px;
   background-color: #fff;
@@ -143,8 +144,83 @@ html, body {
   color:#131921;
   font-size: 16px;
   text-align: left;
-  margin-left: 10px;
+  margin: 10px 0 0 10px; /* Elimina cualquier margen */
+  padding: 0;
 }
+
+.puntuacionContainer {
+  flex-direction: row;
+  display: flex;
+  width: 20%;
+  align-items: center; /* Alinea verticalmente el número y las estrellas */
+  margin-left: 4px; /* Ajusta según sea necesario */
+}
+
+.imagenPuntuacion {
+  background-image: url("img/estrella4-0.svg");
+  width: 100%; /* Ajusta el tamaño de las estrellas */
+  height: 90px;
+  padding: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: -30px 0 0 0;
+}
+
+.valorPuntuacionPLP {
+  color:#42a0c6;
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: 14px; 
+  text-align: left;
+  margin: -25px 0 0 -70px;
+}
+
+.precio {
+  margin: -20px 0 0 10px;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center; /* Alinea los elementos dentro de la misma línea */
+}
+.stylesCOP {
+  padding: 0;
+  font-size: 12px;
+  
+}
+
+.stylesPRECIO {
+  font-weight: bold;
+  font-size: 18px;
+
+}
+
+.stylesDECIMAL {
+  font-size: 12px;
+
+}
+
+.contenedorDescuento {
+  flex-direction: row;
+  display: flex;
+  align-items: center; /* Alinea verticalmente el número y las estrellas */
+  margin-top: 6px;
+}
+
+.prefijoDescuento {
+  font-size: 15px;
+  width: 15%;
+  margin:0 0 0 -7px;
+}
+
+.cajaDescuento {
+  background-color: #83d972;
+  margin: 0 8px 0 -8px;
+}
+
+.sufijoDescuento {
+  font-weight: bold;
+}
+
 
 /* ASIDE (BANNER PUBLICITARIO)
 /* ---------------------------------------- */
