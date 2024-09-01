@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="fonts.css">
     <title>Lista de productos</title>
 </head>
-<body>
+<body class="noDesplazamientoHorizontal">
     <main class="flex flex-rows mainPLP fuenteGlobalPLP">
         <section class="breadcrumb flex-breadcrumb">
             <ol class="elementsBreadcrumb flex">
@@ -18,18 +18,134 @@
             </ol>
         </section>
         <section class="accionesSeccion flex">
-            <div class="flex-acciones">filtrar, resultados</div>
-            <div class="flex-acciones">ordenar por</div>
+            <div class="flex-acciones ">
+                <div>10 resultados de 1.832</div>
+            </div>
+            <div class="flex-acciones estilosOrdenar">
+                <form>
+                    <label for="ordenar" class="ordenar-label">Ordenar por:</label>
+                    <select id="ordenar" class="ordenar">
+                      <option value="relevancia">Relevancia</option>
+                      <option value="fecha_carga">Fecha de carga</option>
+                      <option value="precio_menor_mayor">Precio menor a mayor</option>
+                      <option value="precio_mayor_menor">Precio mayor a menor</option>
+                    </select>
+                </form>
+            </div>
         </section>
-        <section class="listaProductos ">
+
+
+        <!-- VENTANA DESPLAZABLE -->
+
+        
+        <input type="checkbox" id="toggle"> <!-- Checkbox para controlar la ventana de filtros -->
+        <!-- Superposición (overlay) -->
+        <div class="overlay" onclick="document.getElementById('toggle').checked = false;"></div>
+        <label for="toggle" class="btn-open">Filtros</label> <!-- Botón para abrir la ventana de filtros -->
+
+        <!-- Ventana de filtros -->
+        <div class="filtros">
+            <h3>Filtros</h3>
+            <div class="categoria"><!-- Aquí van las categorías y filtros -->
+                <!-- Categoría: Tecnología -->
+                <div class="categoria">
+                    <h4>Tecnología</h4>
+                    <label>
+                        <input type="checkbox" name="tecnologia-computadores">
+                        Computadores (10)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="tecnologia-televisores">
+                        Televisores (5)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="tecnologia-audio">
+                        Audio (8)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="tecnologia-video">
+                        Video (6)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="tecnologia-impresion">
+                        Impresión (4)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="tecnologia-camaras">
+                        Cámaras (3)
+                    </label>
+                </div>
+            
+                <!-- Categoría: Electrodomésticos -->
+                <div class="categoria">
+                    <h4>Electrodomésticos</h4>
+                    <label>
+                        <input type="checkbox" name="electrodomesticos-climatizacion">
+                        Climatización (15)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="electrodomesticos-refrigeracion">
+                        Refrigeración (7)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="electrodomesticos-lavadoras">
+                        Lavadoras/Secadoras (5)
+                    </label>
+                </div>
+            
+                <!-- Categoría: Celulares -->
+                <div class="categoria">
+                    <h4>Celulares</h4>
+                    <label>
+                        <input type="checkbox" name="celulares-celulares">
+                        Celulares (20)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="celulares-tabletas">
+                        Tabletas (12)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="celulares-smartwatch">
+                        Smartwatch (6)
+                    </label>
+                </div>
+            
+                 <!-- Categoría: Hogar -->
+                <div class="categoria">
+                    <h4>Hogar</h4>
+                    <label>
+                        <input type="checkbox" name="hogar-salas">
+                        Salas (25)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="hogar-comedor">
+                        Comedor (10)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="hogar-cocina">
+                        Cocina (9)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="hogar-bano">
+                        Baño (5)
+                    </label>
+                </div>
+        </div>
+        <!-- Botón para cerrar la ventana y aplicar filtros -->
+        <label for="toggle" class="btn-filtrar">Filtrar</label>
+        </div>
+        <!-- FINALIZA IMPLEMENTACION DE VENTANA DESPLAZABLE -->
+
+
+        <section class="listaProductos flex">
             <ul class="productos">
                 <li class="flex">
-                    <span class="imagenProducto"></span>
+                    <span class="imagenProducto producto1"></span>
                     <span>
                         <h2 class="tituloProducto">HP Portátil de negocios 17, pantalla HD+ de 17.3", procesador Intel Core i3-1125G4 de 11ª generación, 32 GB de RAM, SSD de 1 TB, Wi-Fi, HDMI, cámara web, Windows 11 Pro, color plateado</h2>
                         <div class="puntuacionContainer">
-                            <span class="imagenPuntuacion"></span>
-                            <span class="valorPuntuacionPLP">4.0</span>
+                            <span class="imagenPuntuacion4"></span>
+                            <span class="valorPuntuacion">4.0</span>
                         </div>
                         <div class="precio">
                             <span class="stylesCOP">COP</span>
@@ -37,65 +153,202 @@
                             <span class="stylesDECIMAL">999</span>
                         </div>
                         <div class="contenedorDescuento">
-                            <span class="prefijoDescuento">Solo por hoy</span>
-                            <span class="cajaDescuento">Ahorra 25%</span>
-                            <span class="sufijoDescuento">900.000 COP</span>
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 25%  </span>
+                            <span class="sufijoDescuento">900.000 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">
+                           <a href="pdp.html">Agregar al carrito</a>
                         </div>
                     </span>
-                    
                 </li>
                 <li class="flex">
-                    <span class="imagenProducto"></span>
+                    <span class="imagenProducto producto2"></span>
                     <span>
                         <h2 class="tituloProducto">ASUS Laptop Chromebook CM14, pantalla antirreflejos HD de 14 pulgadas (1366 x 768), MediaTek Kompanio 520, 4 GB de RAM</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion2-5"></span>
+                            <span class="valorPuntuacion">2.5</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">1'800.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 5%  </span>
+                            <span class="sufijoDescuento">1'710.000 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
                     </span>
                 </li>
                 <li class="flex">
-                    <span class="imagenProducto"></span>
+                    <span class="imagenProducto producto3"></span>
                     <span>
                         <h2 class="tituloProducto">HP Computadora portátil 14, Intel Celeron N4020, 4 GB de RAM, 64 GB de almacenamiento, pantalla HD de microborde de 14 pulgadas, Windows 11 Home, delgada y portátil</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion1"></span>
+                            <span class="valorPuntuacion">1.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">2'300.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 35%  </span>
+                            <span class="sufijoDescuento">1'495.000 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
                     </span>
                 </li>
                 <li class="flex">
-                    <span class="imagenProducto"></span>
+                    <span class="imagenProducto producto4"></span>
                     <span>
                         <h2 class="tituloProducto">Intel NUC 13 Pro, Arena Canyon NUC13ANHi7 Mini PC con procesador Core i7-1360P, gráficos Intel Iris Xe, 32 GB de RAM y 1 TB NVMe SSD (12C/16T/18M caché, hasta 5.0 GHz) </h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion4"></span>
+                            <span class="valorPuntuacion">4.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">5'300.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 10%  </span>
+                            <span class="sufijoDescuento">4'770.000 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
                     </span>
                 </li>
                 <li class="flex">
-                    <span class="imagenProducto"></span>
+                    <span class="imagenProducto producto5"></span>
                     <span>
                         <h2 class="tituloProducto">HP Escritorio todo en uno 2022, pantalla FHD de 21.5 pulgadas, procesador Intel Celeron J4025, 16 GB RAM, 512 GB PCIe SSD, cámara web, HDMI, RJ-45, teclado y mouse con cable</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion2-5"></span>
+                            <span class="valorPuntuacion">2.5</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">3'195.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 3%  </span>
+                            <span class="sufijoDescuento">3'099.150 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
                     </span>
                 </li>
                 <li class="flex">
-                    <span class="imagenProducto"></span>
+                    <span class="imagenProducto producto6"></span>
                     <span>
                         <h2 class="tituloProducto">HP Premium Stream - Laptop BrightView HD de 14 pulgadas, Intel Celeron N4120, 8 GB de RAM, 64 GB de almacenamiento eMMC, gráficos UHD, cámara web HD, 1 año Office 365</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion1"></span>
+                            <span class="valorPuntuacion">1.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">985.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 1%  </span>
+                            <span class="sufijoDescuento">975.150 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
                     </span>
                 </li>
                 <li class="flex">
-                    <span class="imagenProducto"></span>
+                    <span class="imagenProducto producto7"></span>
                     <span>
                         <h2 class="tituloProducto">Dell OptiPlex PC de escritorio para computadora, Intel Core i5 de 3ª generación de 3.2 GHz, 16 GB de RAM, disco duro de 2 TB, nuevo monitor LED de 22 pulgadas, teclado y mouse RGB</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion4"></span>
+                            <span class="valorPuntuacion">4.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">4'620.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 20%  </span>
+                            <span class="sufijoDescuento">3'696.000 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
                     </span>
                 </li>
-                <li class="flex">
-                    <span class="imagenProducto"></span>
+                <li class="flex"> 
+                    <span class="imagenProducto producto8"></span>
                     <span>
                         <h2 class="tituloProducto">HP Laptop ultraligera de 14 pulgadas para estudiantes y negocios, Intel Quad-Core N4120, 8 GB de RAM, 192 GB de almacenamiento (64 GB eMMC + 128 GB Micro SD)</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion2-5"></span>
+                            <span class="valorPuntuacion">2.5</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">1'190.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 15%  </span>
+                            <span class="sufijoDescuento">1'011.500 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
                     </span>
                 </li>
                 <li class="flex">
-                    <span class="imagenProducto"></span>
+                    <span class="imagenProducto producto9"></span>
                     <span>
                         <h2 class="tituloProducto">HP EliteDesk 800 G6 Business Mini PC computadora de escritorio, Intel Octa-Core i7-10700 hasta 4.8GHz, 64 GB DDR4 RAM, 2TB PCIe SSD, 802.11AC WiFi, Bluetooth</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion1"></span>
+                            <span class="valorPuntuacion">1.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">2'279.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 5%  </span>
+                            <span class="sufijoDescuento">2'165.050 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
                     </span>
                 </li>
                 <li class="flex">
-                    <span class="imagenProducto"></span>
+                    <span class="imagenProducto producto10"></span>
                     <span>
                         <h2 class="tituloProducto">Lenovo IdeaPad 1 - Laptop con pantalla FHD de 15.6 pulgadas, AMD Ryzen 5 5500U, 8 GB de RAM, SSD de 512 GB, Windows 11 Home, cámara de 720p con obturador de privacidad</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion4"></span>
+                            <span class="valorPuntuacion">4.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">1'620.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 10%  </span>
+                            <span class="sufijoDescuento">1'458.000 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
                     </span>
                 </li>
             </ul>
