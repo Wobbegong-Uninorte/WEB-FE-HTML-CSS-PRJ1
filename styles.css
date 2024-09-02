@@ -341,6 +341,10 @@ body {
 /***************************************Main Page***************************************/
 
 
+/*   html, body {
+    margin: 0;
+    padding: 0;
+  } */
 
 .logo {
   border-radius: 50%;
@@ -1714,6 +1718,7 @@ body {
   background: linear-gradient(0deg, #4C37C0 0%, #5536B9 97%, #442da2 100%);
 }
 
+
 /***************************SHOPPING CART********************************/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat");
 
@@ -1849,3 +1854,4 @@ a {
   }
 
 }
+
