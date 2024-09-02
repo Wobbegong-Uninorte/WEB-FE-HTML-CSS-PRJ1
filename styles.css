@@ -1722,7 +1722,7 @@ a {
   color: white;
 }
 
-main {
+.Vmain {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -1824,7 +1824,7 @@ main {
 
 /* RESPONSIVE CART*/
 @media (max-width: 768px) {
-  main {
+  .Vmain {
     flex-direction: column;
     padding: 10px 50px 10px 50px;
   }
