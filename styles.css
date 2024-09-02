@@ -12,7 +12,7 @@ body {
 }
 
 .header {
-  background-color: #4c37c0;
+  background-color: #4C37C0;
   display: flex;
   justify-content: space-between;
   padding: 15px;
@@ -88,7 +88,7 @@ body {
 }
 
 .subheader {
-  background: linear-gradient(180deg, #4c37c0 0%, #5536b9 50%, #ffffff 100%);
+  background: linear-gradient(180deg, #4C37C0 0%, #5536B9 50%, #ffffff 100%);
   color: #ffffff;
   padding-bottom: 20px;
 }
@@ -116,7 +116,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #4c37c0;
+  background-color: #4C37C0;
   padding: 10px 0;
   list-style: none;
   margin: 0;
@@ -145,12 +145,13 @@ body {
 }
 
 .menu-item:hover > a {
-  background-color: #4c37c0;
+  background-color: #4C37C0;
+
   border-radius: 5px;
 }
 
 .footer {
-  background: linear-gradient(0deg, #4c37c0 0%, #5536b9 97%, #ffffff 100%);
+  background: linear-gradient(0deg, #4C37C0 0%, #5536B9 97%, #ffffff 100%);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -224,7 +225,8 @@ body {
   color: #192641;
 }
 
-@media (max-width: 768px) {
+
+@media(max-width: 768px) {
   .header {
     flex-direction: column;
     align-items: center;
@@ -340,10 +342,6 @@ body {
 
 /***************************************Main Page***************************************/
 
-/*   html, body {
-      margin: 0;
-      padding: 0;
-    } */
 
 .logo {
   border-radius: 50%;
@@ -361,14 +359,16 @@ body {
   border: 2px solid #5c74e0;
 }
 
-.header {
-  background-color: #4c37c0;
+
+.header{
+  background-color: #4C37C0;
   display: flex;
   justify-content: space-between;
   padding: 15px;
 }
 
-.logo {
+
+.logo{
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
   border: 2px solid #8093e4;
@@ -413,25 +413,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 20px; 
 }
 
 .links a {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 14px;
+  flex-direction: column; 
+  align-items: center;    
+  text-decoration: none;  
+  color: #ffffff;            
+  font-size: 14px;        
 }
 
 .links img {
-  width: 35px;
+  width: 35px; 
 }
 
 .subheader {
-  background: linear-gradient(180deg, #4c37c0 0%, #5536b9 50%, #ffffff 100%);
-  color: #ffffff;
+  background: linear-gradient(180deg, #4C37C0 0%, #5536B9 50%, #ffffff 100%);
+  color: #ffffff;            
   padding-bottom: 20px;
 }
 
@@ -440,28 +440,28 @@ body {
   justify-content: left;
   align-items: center;
   gap: 20px;
-  padding-left: 5px;
+  padding-left: 5px; 
 }
 
 .menu-item {
-  position: relative;
+  position: relative; 
 }
 
 .subheader nav a {
-  text-decoration: none;
-  color: #ffffff;
+  text-decoration: none;  
+  color: #ffffff;            
   padding: 5px 10px;
 }
 
 .submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
+  display: none; 
+  position: absolute; 
+  top: 100%; 
   left: 0;
-  background-color: #4c37c0;
-  padding: 10px 0;
-  list-style: none;
-  margin: 0;
+  background-color: #4C37C0; 
+  padding: 10px 0; 
+  list-style: none; 
+  margin: 0; 
   z-index: 1000;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -469,12 +469,12 @@ body {
 }
 
 .submenu li {
-  padding: 5px 20px;
+  padding: 5px 20px; 
 }
 
 .submenu li a {
-  color: #ffffff;
-  text-decoration: none;
+  color: #ffffff; 
+  text-decoration: none; 
 }
 
 .submenu li a:hover {
@@ -507,6 +507,7 @@ body {
   gap: 5px;
 }
 
+
 .topf {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -515,11 +516,11 @@ body {
   padding-top: 20px;
 }
 
-.contact img {
+.contact img{
   width: auto;
   height: 30px;
 }
-.bottomf {
+.bottomf{
   display: flex;
   justify-content: space-around;
   border-top: 1px solid #ffffff;
@@ -534,6 +535,7 @@ body {
   gap: 20px;
   max-width: 350px;
 }
+
 
 .pays img {
   width: auto;
@@ -564,14 +566,14 @@ body {
   color: #192641;
 }
 
-/* MODIFICACION AQUI ******************************************************************/
+
 .classMainUH2001 {
   padding: 1rem;
   background-color: #e5e5f7;
   opacity: 0.8;
   background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
   background-size: 10px 10px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .promocionales img {
@@ -584,19 +586,11 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin: 2rem 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .destacados .producto {
-  background: linear-gradient(
-    to bottom,
-    #ffffff,
-    #533de6,
-    #523ce0,
-    #5536b9,
-    #4b36ba,
-    #3b2782
-  );
+  background: linear-gradient(to bottom, #FFFFFF, #533DE6, #523CE0, #5536B9, #4B36BA, #3B2782);
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
@@ -616,14 +610,14 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.9) 0%,
-    rgba(255, 255, 255, 0.7) 20%,
-    rgba(255, 255, 255, 0.5) 40%,
-    rgba(255, 255, 255, 0.3) 60%,
-    rgba(255, 255, 255, 0.1) 80%,
-    rgba(255, 255, 255, 0) 100%
+
+  background: linear-gradient(to bottom, 
+    rgba(255,255,255,0.9) 0%,
+    rgba(255,255,255,0.7) 20%,
+    rgba(255,255,255,0.5) 40%,
+    rgba(255,255,255,0.3) 60%,
+    rgba(255,255,255,0.1) 80%,
+    rgba(255,255,255,0) 100%
   );
   z-index: 1;
 }
@@ -659,7 +653,7 @@ body {
 }
 
 .destacados .producto .precio-descuento {
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
@@ -686,19 +680,11 @@ body {
 }
 
 /* Ajustes para las filas */
-.destacados .producto:nth-child(4n + 1),
-.destacados .producto:nth-child(4n + 2),
-.destacados .producto:nth-child(4n + 3),
-.destacados .producto:nth-child(4n + 4) {
-  background: linear-gradient(
-    to bottom,
-    #ffffff,
-    #533de6,
-    #523ce0,
-    #5536b9,
-    #4b36ba,
-    #3b2782
-  );
+.destacados .producto:nth-child(4n+1),
+.destacados .producto:nth-child(4n+2),
+.destacados .producto:nth-child(4n+3),
+.destacados .producto:nth-child(4n+4) {
+  background: linear-gradient(to bottom, #FFFFFF, #533DE6, #523CE0, #5536B9, #4B36BA, #3B2782);
 }
 
 .banner-publicitario img {
@@ -1006,7 +992,7 @@ body {
 
 /***************************************PRODUCT LIST PAGE (UH2002 PLP)***************************************/
 .fuenteGlobalPLP {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
 }
 
 .sinLineaTexto {
@@ -1023,8 +1009,7 @@ body {
   flex-direction: column;
 }
 
-/* BREADCRUMB
-  /* ---------------------------------------- */
+
 .elementsBreadcrumb {
   flex-direction: row;
   list-style: none;
@@ -1059,10 +1044,12 @@ body {
   color: #a793f7;
 }
 
+
+
 /* FILTER, SORT, INFO
-  /* ---------------------------------------- */
+/* ---------------------------------------- */
 .accionesSeccion {
-  box-sizing: border-box;
+  box-sizing:border-box;
   padding-top: 0.9em;
   padding-left: 4em;
   background-color: #5142b0;
@@ -1084,17 +1071,19 @@ body {
   background-color: #242f3d;
 }
 
+
 /*PRODUCT LIST
-  /* ---------------------------------------- */
+/* ---------------------------------------- */
 .listaProductos {
-  background-color: #e5e5f7;
+  background-color: #e5e5f7  ;
 }
+
 
 .productos {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(10, auto);
-  gap: 20px;
+  grid-template-columns: 1fr; 
+  grid-template-rows: repeat(10, auto); 
+  gap: 20px; 
   justify-content: center;
   padding: 0;
   margin: 14px;
@@ -1119,7 +1108,7 @@ body {
   height: 100%;
   width: 22%;
   background-color: #f7f7f7;
-  background-size: contain;
+  background-size:contain;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1165,10 +1154,10 @@ body {
 }
 
 .tituloProducto {
-  color: #131921;
+  color:#131921;
   font-size: 16px;
   text-align: left;
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 10px; 
   padding: 0;
 }
 
@@ -1177,38 +1166,38 @@ body {
   width: 50%;
   flex-direction: row;
   display: flex;
-  align-items: center;
-  margin-left: 8px;
+  align-items: center; 
+  margin-left: 8px; 
 }
 
 .imagenPuntuacion4 {
   background-image: url("img/estrella4-0.svg");
-  width: 19%;
-  height: 45px;
+  width: 19%; 
+  height: 45px; 
   padding: 0;
   background-size: 105%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; 
 }
 
 .imagenPuntuacion1 {
   background-image: url("img/estrella1-0.svg");
-  width: 19%;
-  height: 45px;
+  width: 19%; 
+  height: 45px; 
   padding: 0;
   background-size: 105%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; 
 }
 
 .imagenPuntuacion2-5 {
   background-image: url("img/estrella2-5.svg");
-  width: 18.5%;
-  height: 45px;
+  width: 18.5%; 
+  height: 45px; 
   padding: 0;
   background-size: 105%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; 
 }
 
 .valorPuntuacion {
@@ -1225,7 +1214,7 @@ body {
   padding: 0;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: center; 
 }
 
 .stylesCOP {
@@ -1269,8 +1258,8 @@ body {
   margin-left: 3px;
   line-height: 12px;
   box-sizing: border-box;
-  background-color: #00ddff;
-  color: #0f1111;
+  background-color: #00ddff ;
+  color:#0f1111;
   border-radius: 10px;
   height: 35px;
   width: 100px;
@@ -1280,8 +1269,7 @@ body {
   text-align: center;
 }
 
-/* ASIDE (BANNER ADVERTISING)
-  /* ---------------------------------------- */
+
 .anuncioPublicitario {
   display: flex;
   background-color: #442da2;
@@ -1292,7 +1280,7 @@ body {
 
 .bannerAds {
   position: relative;
-  width: 100%;
+  width: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1301,21 +1289,19 @@ body {
 
 .video-anuncio {
   object-position: 0 -30px;
-  width: 55%;
-  height: 70%;
-  object-fit: cover;
+  width: 55%; 
+  height: 70%; 
+  object-fit: cover; 
 }
+
 
 /* ---------------------------------------- */
 
-.flex,
-.flex-breadcrumb,
-.flex-acciones {
+.flex, .flex-breadcrumb, .flex-acciones {
   display: flex;
 }
 
-.flex-breadcrumb,
-.flex-acciones {
+.flex-breadcrumb, .flex-acciones {
   width: 50%;
   height: 100%;
   padding: 0;
@@ -1327,10 +1313,11 @@ body {
   overflow-x: hidden;
 }
 
-/* Checkbox oculto */
-#toggle {
-  display: none;
-}
+
+  /* Checkbox oculto */
+  #toggle {
+    display: none;
+  }
 
 /* Button to open filters */
 .btn-open {
@@ -1352,16 +1339,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* semi-transparent background to cover the rest of the page*/
+
+  background-color: rgba(0, 0, 0, 0.5);/* semi-transparent background to cover the rest of the page*/
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1001;
-  pointer-events: none; /*The overlay does not interfere with clicks on elements below it.*/
+  pointer-events:none; /*The overlay does not interfere with clicks on elements below it.*/
+
 }
 
 /* styles for the filter popup */
@@ -1373,11 +1357,12 @@ body {
   height: calc(100% - 40px);
   background-color: #2d1d6b;
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
   transition: left 0.3s ease;
   z-index: 1002;
   overflow-y: auto;
   scrollbar-width: none;
+
   color: #fff;
 }
 
@@ -1441,6 +1426,7 @@ body {
     height: 100%;
     width: 30%;
     background-color: #f7f7f7;
+
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1459,75 +1445,80 @@ body {
     width: 150%;
     flex-direction: row;
     display: flex;
-    align-items: center;
+    align-items: center; 
     margin-left: 8px;
   }
+  
 
   .imagenPuntuacion4 {
     background-image: url("img/estrella4-0.svg");
-    width: 15%;
-    height: 25px;
+    width: 15%; 
+    height: 25px; 
     padding: 0;
     background-size: 105%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; 
   }
-
+  
   .imagenPuntuacion1 {
     background-image: url("img/estrella1-0.svg");
-    width: 15%;
-    height: 25px;
+    width: 15%; 
+    height: 25px; 
     padding: 0;
     background-size: 105%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; 
   }
-
+  
   .imagenPuntuacion2-5 {
     background-image: url("img/estrella2-5.svg");
-    width: 15%;
-    height: 25px;
+    width: 15%; 
+    height: 25px; 
     padding: 0;
     background-size: 105%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; 
   }
-
+  
   .valorPuntuacion {
     font-weight: bold;
-    font-size: 0.3em;
-    margin-left: 4px;
-    color: #007185;
+    font-size: 0.3em; 
+    margin-left: 4px; 
+    color: #007185; 
   }
-
+  
   /*CONTAINER OF THE NON-DISCOUNT PRICE*/
   .precio {
     margin-left: 4px;
     padding: 0;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: center; 
   }
-
+  
   .stylesCOP {
     padding: 0;
     font-size: 0.25em;
+    
   }
-
+  
   .stylesPRECIO {
     font-weight: bold;
     font-size: 0.5em;
+  
   }
-
+  
   .stylesDECIMAL {
     font-size: 0.25em;
+  
   }
-
-  /*DISCOUNTED PRICE CONTAINER*/
+  
+  
+/*DISCOUNTED PRICE CONTAINER*/
   .prefijoDescuento {
     font-size: 0.25em;
   }
-
+  
   .cajaDescuento {
     height: 2.4em;
     margin-left: 4px;
@@ -1539,14 +1530,14 @@ body {
     margin-left: 4px;
     font-size: 0.25em;
   }
-
+  
   .agregarAlcarritoPLP {
-    margin: 6px 0 4px 0;
+    margin:6px 0 4px 0;
     margin-left: 3px;
     line-height: 0.95em;
     box-sizing: border-box;
-    background-color: #00ddff;
-    color: #0f1111;
+    background-color:#00ddff ;
+    color:#0f1111;
     border-radius: 10px;
     height: 3em;
     width: 8em;
@@ -1577,11 +1568,12 @@ body {
     margin-right: 0.75em;
   }
 
-  /*STYLES FOR THE FILTER POP-UP WINDOW*/
-  /* Button to open filters */
+  
+/*STYLES FOR THE FILTER POP-UP WINDOW*/
+/* Button to open filters */
   .btn-open {
-    padding: 6px 19px 9px 3em;
-    text-align: left;
+    padding:6px 19px 9px 3em;
+    text-align:left;
     font-size: 10px;
     height: 1%;
     width: 3%;
@@ -1589,26 +1581,22 @@ body {
     left: 2px;
   }
 
-  /* Overlay */
+
   .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.5
-    ); /* semi-transparent background to cover the rest of the page*/
+
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background to cover the rest of the page*/
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1001;
-    pointer-events: none; /*The overlay does not interfere with clicks on elements below it.*/
+    pointer-events:none; /*The overlay does not interfere with clicks on elements below it.*/
   }
 
-  /* styles for the filter popup */
+/* styles for the filter popup */
   .filtros {
     position: fixed;
     top: 0;
@@ -1625,17 +1613,18 @@ body {
     font-size: 0.65em;
   }
 
-  /* Show filters and overlay when checkbox is checked */
+
+/* Show filters and overlay when checkbox is checked */
   #toggle:checked ~ .overlay {
     opacity: 1;
-    pointer-events: all;
+    pointer-events:all; 
   }
 
   #toggle:checked ~ .filtros {
     left: 0;
   }
 
-  /* filter button styles */
+
   .btn-filtrar {
     width: 100%;
     padding: 10px;
@@ -1649,8 +1638,7 @@ body {
     margin-bottom: 30px;
   }
 
-  /* BREADCRUMB
-    /* ---------------------------------------- */
+
   .elementsBreadcrumb {
     align-self: center;
     margin: 0.7em 0 0.7em 1.15em;
@@ -1691,14 +1679,15 @@ body {
   }
   .video-anuncio {
     object-position: 0 -0.3em;
-    width: 55%;
-    height: 70%;
-    object-fit: cover;
+    width: 55%; 
+    height: 70%; 
+    object-fit: cover; 
   }
 
   .margenIzquiero {
-    margin-left: 1em;
+    margin-left: 1.0em;
   }
+  
 
   .alturaMin {
     min-height: 3560px;
@@ -1710,15 +1699,19 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+
 }
 
 .quitarGradienteHeader {
-  background: #4c37c0;
+  background: #4C37C0;
 }
 
 .quitarGradienteFooter {
-  background: linear-gradient(0deg, #4c37c0 0%, #5536b9 97%, #442da2 100%);
+  background: linear-gradient(0deg, #4C37C0 0%, #5536B9 97%, #442da2 100%);
 }
+
+
 
 /***************************SHOPPING CART********************************/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat");
@@ -1740,7 +1733,8 @@ a {
   color: white;
 }
 
-.bread:hover {
+.bread:hover{
+
   color: #a793f7;
 }
 
@@ -1826,6 +1820,7 @@ a {
   margin-top: auto;
 }
 
+
 /* RESPONSIVE CART*/
 @media (max-width: 768px) {
   .Vmain {
@@ -1847,6 +1842,7 @@ a {
     margin-left: 0;
     color: white;
   }
+
 
   .bread:hover {
     color: #8c71f5;
@@ -2269,3 +2265,10 @@ a {
     margin: 15px 0;
   }
 }
+  
+  .bread:hover{
+    color: #8c71f5;
+  }
+
+}
+

@@ -3,10 +3,512 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Lista de productos</title>
 </head>
-<body>
+<body class="noDesplazamientoHorizontal alturaMin">
+    <header class="header margenIzquiero ">
+
+        <div class="logo"><img src="img/logo.svg" alt=""></div>
+
+        <div class="center">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos">
+            </div>
+
+            <button type="submit"><img src="img/loupe.svg" alt=""></button>
+        </div>
+
+        <div class="links">
+            <a href="cart.html">
+                <img src="img/cart.svg" alt="">
+                <span>Carrito</span>
+            </a>
+            <a href="">
+                <img src="img/user.svg" alt="">
+                <span>Mi Cuenta</span>
+            </a>
+        </div>
+
+    </header>
+
+    <section class="subheader margenIzquiero quitarGradienteHeader">
+        <nav>
+            <div class="menu-item">
+                <a href="">Tecnología</a>
+                <ul class="submenu">
+                    <li><a href="plp.html">Computadores</a></li>
+                    <li><a href="#">Televisores</a></li>
+                    <li><a href="#">Audio</a></li>
+                    <li><a href="#">Video</a></li>
+                    <li><a href="#">Impresión</a></li>
+                    <li><a href="#">Cámaras</a></li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <a href="#">Electrodomésticos</a>
+                <ul class="submenu">
+                    <li><a href="#">Climatización</a></li>
+                    <li><a href="#">Refrigeración</a></li>
+                    <li><a href="#">Lavadoras/Secadoras</a></li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <a href="#">Celulares</a>
+                <ul class="submenu">
+                    <li><a href="#">Celulares</a></li>
+                    <li><a href="#">Tabletas</a></li>
+                    <li><a href="#">Smartwatch</a></li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <a href="#">Hogar</a>
+                <ul class="submenu">
+                    <li><a href="#">Salas</a></li>
+                    <li><a href="#">Comedor</a></li>
+                    <li><a href="#">Cocina</a></li>
+                    <li><a href="#">Baño</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <main class="flex flex-rows mainPLP fuenteGlobalPLP">
+        <!-- BREADCRUMB -->
+        <section class="breadcrumb flex-breadcrumb">
+            <ol class="elementsBreadcrumb flex">
+                <li class="primer-itemBreadcrumb">
+                    <a class="sinLineaTexto" href="index.html">Home</a>
+                </li>
+                <li class="intermedios-itemBreadcrumb">Tecnologia</li>
+                <li class="intermedios-itemBreadcrumb">Computadores</li>
+                <li class="ultimo-itemBreadcrumb">Lista de productos</li>
+            </ol>
+        </section>
+
+
+        <!-- ORDER BY AND "X ITEMS OF Y" -->
+        <section class="accionesSeccion flex">
+            <div class="flex-acciones ">
+                <div>10 resultados de 1.832</div>
+            </div>
+            <div class="flex-acciones estilosOrdenar fuenteGlobalPLP">
+                <form>
+                    <label for="ordenar" class="ordenar-label fuenteGlobalPLP">Ordenar por:</label>
+                    <select class="fuenteGlobalPLP ordenar" id="ordenar">
+                        <option class="fuenteGlobalPLP" value="relevancia">Relevancia</option>
+                        <option class="fuenteGlobalPLP" value="fecha_carga">Fecha de carga</option>
+                        <option class="fuenteGlobalPLP" value="precio_menor_mayor">Precio menor a mayor</option>
+                        <option class="fuenteGlobalPLP" value="precio_mayor_menor">Precio mayor a menor</option>
+                    </select>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- SLIDING WINDOW -->
+        <input type="checkbox" id="toggle"> <!-- Checkbox to control the filter window -->
+        <!-- Superposición (overlay) -->
+        <div class="overlay" onclick="document.getElementById('toggle').checked = false;"></div>
+        <label for="toggle" class="btn-open">Filtros</label> <!-- Button to open the filters window-->
+        <!-- Ventana de filtros -->
+        <div class="filtros">
+            <h3 class="colorSubtitles">Filtros</h3>
+            <div class="categoria"><!-- list of categories and filters -->
+                <!--Technology -->
+                <div class="categoria">
+                    <h4 class="colorSubtitles">Tecnología</h4>
+                    <label>
+                        <input type="checkbox" name="tecnologia-computadores">
+                        Computadores (10)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="tecnologia-televisores">
+                        Televisores (5)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="tecnologia-audio">
+                        Audio (8)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="tecnologia-video">
+                        Video (6)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="tecnologia-impresion">
+                        Impresión (4)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="tecnologia-camaras">
+                        Cámaras (3)
+                    </label>
+                </div>
+            
+                <!--Household appliances -->
+                <div class="categoria">
+                    <h4 class="colorSubtitles">Electrodomésticos</h4>
+                    <label>
+                        <input type="checkbox" name="electrodomesticos-climatizacion">
+                        Climatización (15)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="electrodomesticos-refrigeracion">
+                        Refrigeración (7)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="electrodomesticos-lavadoras">
+                        Lavadoras/Secadoras (5)
+                    </label>
+                </div>
+            
+                <!--Cell phones -->
+                <div class="categoria">
+                    <h4 class="colorSubtitles">Celulares</h4>
+                    <label>
+                        <input type="checkbox" name="celulares-celulares">
+                        Celulares (20)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="celulares-tabletas">
+                        Tabletas (12)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="celulares-smartwatch">
+                        Smartwatch (6)
+                    </label>
+                </div>
+            
+                <!--Household Items -->
+                <div class="categoria">
+                    <h4 class="colorSubtitles">Hogar</h4>
+                    <label>
+                        <input type="checkbox" name="hogar-salas">
+                        Salas (25)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="hogar-comedor">
+                        Comedor (10)
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="hogar-cocina">
+                        Cocina (9)
+                    </label><br>
+                    <label>
+                        <input class= "separadorBotonFiltrar" type="checkbox" name="hogar-bano">
+                        Baño (5)
+                    </label>
+                </div>
+        </div>
+        <!--Button to close the window and apply filters-->
+        <label for="toggle" class="btn-filtrar">Filtrar</label>
+        </div>
+        <!-- Implementation of scrollable window is complete -->
+
+        <!-- LIST OF PRODUCTS -->
+        <section class="listaProductos flex">
+            <ul class="productos">
+                <li class="flex">
+                    <span class="imagenProducto producto1"></span>
+                    <span>
+                        <h2 class="tituloProducto">HP Portátil de negocios 17, pantalla HD+ de 17.3", procesador Intel Core i3-1125G4 de 11ª generación, 32 GB de RAM, SSD de 1 TB, Wi-Fi, HDMI, cámara web, Windows 11 Pro, color plateado</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion4"></span>
+                            <span class="valorPuntuacion">4.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">1'200.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 25%  </span>
+                            <span class="sufijoDescuento">900.000 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">
+                            <a href="pdp.html" class="sinLineaTexto">Agregar al carrito</a>
+                        </div>
+                    </span>
+                </li>
+                <li class="flex">
+                    <span class="imagenProducto producto2"></span>
+                    <span>
+                        <h2 class="tituloProducto">ASUS Laptop Chromebook CM14, pantalla antirreflejos HD de 14 pulgadas (1366 x 768), MediaTek Kompanio 520, 4 GB de RAM</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion2-5"></span>
+                            <span class="valorPuntuacion">2.5</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">1'800.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 5%  </span>
+                            <span class="sufijoDescuento">1'710.000 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
+                    </span>
+                </li>
+                <li class="flex">
+                    <span class="imagenProducto producto3"></span>
+                    <span>
+                        <h2 class="tituloProducto">HP Computadora portátil 14, Intel Celeron N4020, 4 GB de RAM, 64 GB de almacenamiento, pantalla HD de microborde de 14 pulgadas, Windows 11 Home, delgada y portátil</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion1"></span>
+                            <span class="valorPuntuacion">1.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">2'300.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 35%  </span>
+                            <span class="sufijoDescuento">1'495.000 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
+                    </span>
+                </li>
+                <li class="flex">
+                    <span class="imagenProducto producto4"></span>
+                    <span>
+                        <h2 class="tituloProducto">Intel NUC 13 Pro, Arena Canyon NUC13ANHi7 Mini PC con procesador Core i7-1360P, gráficos Intel Iris Xe, 32 GB de RAM y 1 TB NVMe SSD (12C/16T/18M caché, hasta 5.0 GHz) </h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion4"></span>
+                            <span class="valorPuntuacion">4.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">5'300.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 10%  </span>
+                            <span class="sufijoDescuento">4'770.000 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
+                    </span>
+                </li>
+                <li class="flex">
+                    <span class="imagenProducto producto5"></span>
+                    <span>
+                        <h2 class="tituloProducto">HP Escritorio todo en uno 2022, pantalla FHD de 21.5 pulgadas, procesador Intel Celeron J4025, 16 GB RAM, 512 GB PCIe SSD, cámara web, HDMI, RJ-45, teclado y mouse con cable</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion2-5"></span>
+                            <span class="valorPuntuacion">2.5</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">3'195.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 3%  </span>
+                            <span class="sufijoDescuento">3'099.150 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
+                    </span>
+                </li>
+                <li class="flex">
+                    <span class="imagenProducto producto6"></span>
+                    <span>
+                        <h2 class="tituloProducto">HP Premium Stream - Laptop BrightView HD de 14 pulgadas, Intel Celeron N4120, 8 GB de RAM, 64 GB de almacenamiento eMMC, gráficos UHD, cámara web HD, 1 año Office 365</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion1"></span>
+                            <span class="valorPuntuacion">1.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">985.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 1%  </span>
+                            <span class="sufijoDescuento">975.150 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
+                    </span>
+                </li>
+                <li class="flex">
+                    <span class="imagenProducto producto7"></span>
+                    <span>
+                        <h2 class="tituloProducto">Dell OptiPlex PC de escritorio para computadora, Intel Core i5 de 3ª generación de 3.2 GHz, 16 GB de RAM, disco duro de 2 TB, nuevo monitor LED de 22 pulgadas, teclado y mouse RGB</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion4"></span>
+                            <span class="valorPuntuacion">4.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">4'620.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 20%  </span>
+                            <span class="sufijoDescuento">3'696.000 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
+                    </span>
+                </li>
+                <li class="flex"> 
+                    <span class="imagenProducto producto8"></span>
+                    <span>
+                        <h2 class="tituloProducto">HP Laptop ultraligera de 14 pulgadas para estudiantes y negocios, Intel Quad-Core N4120, 8 GB de RAM, 192 GB de almacenamiento (64 GB eMMC + 128 GB Micro SD)</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion2-5"></span>
+                            <span class="valorPuntuacion">2.5</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">1'190.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 15%  </span>
+                            <span class="sufijoDescuento">1'011.500 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
+                    </span>
+                </li>
+                <li class="flex">
+                    <span class="imagenProducto producto9"></span>
+                    <span>
+                        <h2 class="tituloProducto">HP EliteDesk 800 G6 Business Mini PC computadora de escritorio, Intel Octa-Core i7-10700 hasta 4.8GHz, 64 GB DDR4 RAM, 2TB PCIe SSD, 802.11AC WiFi, Bluetooth</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion1"></span>
+                            <span class="valorPuntuacion">1.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">2'279.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 5%  </span>
+                            <span class="sufijoDescuento">2'165.050 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
+                    </span>
+                </li>
+                <li class="flex">
+                    <span class="imagenProducto producto10"></span>
+                    <span>
+                        <h2 class="tituloProducto">Lenovo IdeaPad 1 - Laptop con pantalla FHD de 15.6 pulgadas, AMD Ryzen 5 5500U, 8 GB de RAM, SSD de 512 GB, Windows 11 Home, cámara de 720p con obturador de privacidad</h2>
+                        <div class="puntuacionContainer">
+                            <span class="imagenPuntuacion4"></span>
+                            <span class="valorPuntuacion">4.0</span>
+                        </div>
+                        <div class="precio">
+                            <span class="stylesCOP">COP</span>
+                            <span class="stylesPRECIO">1'620.000</span>
+                            <span class="stylesDECIMAL">999</span>
+                        </div>
+                        <div class="contenedorDescuento">
+                            <span class="prefijoDescuento">Solo por hoy  </span>
+                            <span class="cajaDescuento">Ahorra 10%  </span>
+                            <span class="sufijoDescuento">1'458.000 COP  </span>
+                        </div>
+                        <div class="agregarAlcarritoPLP">Agregar al carrito</div>
+                    </span>
+                </li>
+            </ul>
+        </section>
+        <!-- PRODUCT LIST ENDS-->
+        <aside class="anuncioPublicitario">
+            <video class="video-anuncio bannerAds video-anuncio" autoplay muted loop>
+                <source src="img/bannerPLP.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </aside>
+    </main>
+
+    <footer class="footer margenIzquiero quitarGradienteFooter">
+        <div class="topf">
+            <div class="info">
+                <p>NovaMart</p>
+                <p>NIT: 123456789</p>
+            </div>
     
+            <div class="contact">
+                <a href=""><img src="img/fb.svg" alt=""></a>
+                <a href=""><img src="img/ig.svg" alt=""></a>
+                <a href=""><img src="img/yt.svg" alt=""></a>
+            </div>
+
+            <div class="pays">
+                <a href=""><img src="img/bancolombia.png" alt=""></a>
+                <a href=""><img src="img/davivienda.png" alt=""></a>
+                <a href=""><img src="img/grupoaval.png" alt=""></a>
+                <a href=""><img src="img/mastercard.png" alt=""></a>
+                <a href=""><img src="img/nequi.png" alt=""></a>
+                <a href=""><img src="img/paypal.png" alt=""></a>
+                <a href=""><img src="img/pse.png" alt=""></a>
+                <a href=""><img src="img/visa.png" alt=""></a>
+            </div>
+        </div>
+        <div class="bottomf">
+            <div class="footer-column">
+                <h3>Nuestra Compañía</h3>
+                <ul>
+                <li><a href="#">Quiénes somos</a></li>
+                <li><a href="#">Nuestras tiendas</a></li>
+                <li><a href="#">Nuestras marcas</a></li>
+                <li><a href="#">Contáctenos</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+                <li><a href="#">Tarjeta de crédito Alkosto</a></li>
+                <li><a href="#">Certificados tributarios</a></li>
+                <li><a href="#">Rifas</a></li>
+                <li><a href="#">Fondo de empleados y cooperativas</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Compras en línea</h3>
+                <ul>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Pago seguro</a></li>
+                <li><a href="#">Métodos de envío</a></li>
+                <li><a href="#">Medios de pago</a></li>
+                <li><a href="#">Seguros</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Servicios</h3>
+                <ul>
+                <li><a href="#">Instalaciones</a></li>
+                <li><a href="#">Agendar servicio de instalación</a></li>
+                <li><a href="#">Garantía extendida</a></li>
+                <li><a href="#">Garantías y centros de servicios técnico</a></li>
+                <li><a href="#">Instalación de Llantas</a></li>
+                <li><a href="#">Consulta tu factura</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Políticas</h3>
+                <ul>
+                <li><a href="#">Términos y condiciones del canal digital</a></li>
+                <li><a href="#">Contrato de compraventa en línea</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Solicitud tratamiento de datos personales</a></li>
+                <li><a href="#">Política de cookies</a></li>
+                <li><a href="#">Política de cambios y devoluciones</a></li>
+                <li><a href="#">Código de ética</a></li>
+                <li><a href="#">Manual de normas SST para Terceros</a></li>
+                <li><a href="#">Línea ética</a></li>
+                <li><a href="#">Superintendencia de Industria y Comercio - SIC</a></li>
+                </ul>
+            </div>              
+        </div>
+    </footer>
+
+
 </body>
 </html>
