@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Montserrat");
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
 
 .fuenteGlobalPLP {
     font-family: 'Montserrat', 'Nunito';
@@ -14,8 +9,6 @@ html, body {
 .sinLineaTexto {
   text-decoration: none;
 }
-
-
 
 .mainPLP {
   background-color: #382586;
@@ -348,7 +341,7 @@ html, body {
 /* Button to open filters */
 .btn-open {
   position: fixed;
-  top: 120px;
+  top: 19em;
   left: 41px;
   padding: 10px 20px;
   background-color: #131921;
@@ -417,6 +410,13 @@ html, body {
   margin-bottom: 30px;
 }
 
+.margenIzquiero {
+  margin-left: 3.3em;
+}
+
+.alturaMin {
+  min-height: 4070px;
+}
 
 /* Styles for mobile devices */
 @media (max-width: 768px) {
@@ -614,7 +614,7 @@ html, body {
   .filtros {
     position: fixed;
     top: 0;
-    left: -12.5em;
+    left: -14.5em;
     width: 22.7%;
     height: calc(100% - 40px);
     background-color: #2d1d6b;
@@ -697,4 +697,29 @@ html, body {
     height: 70%; 
     object-fit: cover; 
   }
+
+  .margenIzquiero {
+    margin-left: 1.0em;
+  }
+  
+  .alturaMin {
+    min-height: 3430px;
+  }
+
+  .anuncioPublicitario {
+    display: flex;
+    background-color: #442da2;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
+
+.quitarGradienteHeader {
+  background: #4C37C0;
+}
+
+.quitarGradienteFooter {
+  background: linear-gradient(0deg, #4C37C0 0%, #5536B9 97%, #442da2 100%);
+}
+
