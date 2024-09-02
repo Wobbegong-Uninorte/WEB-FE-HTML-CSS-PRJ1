@@ -3,10 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>NovaMart</title>
 </head>
 <body>
+    <header class="header">
+
+        <div class="logo"></div>
+
+        <div class="center">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos">
+            </div>
+
+            <button type="submit"><img src="img/loupe.svg" alt=""></button>
+        </div>
+
+        <div class="links">
+            <a href="cart.html">
+                <img src="img/cart.svg" alt="">
+                <span>Carrito</span>
+            </a>
+            <a href="">
+                <img src="img/user.svg" alt="">
+                <span>Mi Cuenta</span>
+            </a>
+        </div>
+
+    </header>
+
+    <section class="subheader">
+        <nav>
+            <div class="menu-item">
+                <a href="plp.html">Tecnología</a>
+                <ul class="submenu">
+                    <li><a href="#">Computadores</a></li>
+                    <li><a href="#">Televisores</a></li>
+                    <li><a href="#">Audio</a></li>
+                    <li><a href="#">Video</a></li>
+                    <li><a href="#">Impresión</a></li>
+                    <li><a href="#">Cámaras</a></li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <a href="#">Electrodomésticos</a>
+                <ul class="submenu">
+                    <li><a href="#">Climatización</a></li>
+                    <li><a href="#">Refrigeración</a></li>
+                    <li><a href="#">Lavadoras/Secadoras</a></li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <a href="#">Celulares</a>
+                <ul class="submenu">
+                    <li><a href="#">Celulares</a></li>
+                    <li><a href="#">Tabletas</a></li>
+                    <li><a href="#">Smartwatch</a></li>
+                </ul>
+            </div>
+            <div class="menu-item">
+                <a href="#">Hogar</a>
+                <ul class="submenu">
+                    <li><a href="#">Salas</a></li>
+                    <li><a href="#">Comedor</a></li>
+                    <li><a href="#">Cocina</a></li>
+                    <li><a href="#">Baño</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Contenido Central -->
+    <main>
+        <!-- Sección de Imágenes Promocionales -->
+        <section class="promocionales">
+            <img src="img/6.svg" alt="Producto en Oferta 1">
+            <img src="img/5.svg" alt="Producto en Oferta 2">
+        </section>
+
+        <!-- Sección de Productos Destacados -->
+        <section class="destacados">
+            <div class="producto">
+                <img src="img/airpods-Pro-2nd-gen.png" alt="Producto 1">
+                <h2>Airpods Pro 2da Gen</h2>
+                <p class="precio-normal">$400.00</p>
+                <p class="precio-descuento">$320.00 <span>-20%</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/airpodspromax.png" alt="Producto 2">
+                <h2>Airpods Pro Max</h2>
+                <p class="precio-normal">$600.00</p>
+                <p class="precio-descuento">$540.00 <span>-10%</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/applewatchultra.png" alt="Producto 3">
+                <h2>Apple Watch Ultra</h2>
+                <p class="precio-normal">$320.00</p>
+                <p class="precio-descuento">$256.00 <span>-20%</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/galaxytabs6.png" alt="Producto 4">
+                <h2>Galaxy Tab S6</h2>
+                <p class="precio-normal">$550.00</p>
+                <p class="precio-descuento">$385.00 <span>-30%</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/galaxywatchFE.png" alt="Producto 5">
+                <h2>Galaxy Watch FE</h2>
+                <p class="precio-normal">$300.00</p>
+                <p class="precio-descuento">$285.00 <span>-5%</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/imac.png" alt="Producto 6">
+                <h2>iMac 24"</h2>
+                <p class="precio-normal">$3000.00</p>
+                <p class="precio-descuento">$2400.00 <span>-20%</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/ipad-pro-12-2018.png" alt="Producto 7">
+                <h2>iPad Pro</h2>
+                <p class="precio-normal">$700.00</p>
+                <p class="precio-descuento">$595.00 <span>-15%</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/iphone15pro.png" alt="Producto 8">
+                <h2>iPhone 15</h2>
+                <p class="precio-normal">$999.00</p>
+                <p class="precio-descuento">$899.00 <span>-10%</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/IPHONE_15_PROMAX.png" alt="Producto 9">
+                <h2>iPhone 15 Pro Max</h2>
+                <p class="precio-normal">$1099.00</p>
+                <p class="precio-descuento">$1044.00 <span>-5%</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/samsung_galaxys24.png" alt="Producto 10">
+                <h2>Galaxy S24</h2>
+                <p class="precio-normal">$999.00</p>
+                <p class="precio-descuento">$800.00 <span>-20%</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/samsung_galaxys24ultra.png" alt="Producto 11">
+                <h2>Galaxy S24 Ultra</h2>
+                <p class="precio-normal">$1199.00</p>
+                <p class="precio-descuento">$839.00 <span>-30%</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/visionpro.png" alt="Producto 12">
+                <h2>Vision Pro</h2>
+                <p class="precio-normal">$3499.00</p>
+                <p class="precio-descuento">$3149.00 <span>-10%</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+        </section>
+
+        <!-- Sección de Banner Publicitario -->
+        <section class="banner-publicitario">
+            <img src="img/4.svg" alt="Banner Publicitario">
+        </section>
+    </main>
+
+    <!-- Footer (Placeholder) -->
     
+    <footer class="footer">
+        <div class="topf">
+            <div class="info">
+                <p>NovaMart</p>
+                <p>NIT: 123456789</p>
+            </div>
+    
+            <div class="contact">
+                <a href=""><img src="img/fb.svg" alt=""></a>
+                <a href=""><img src="img/ig.svg" alt=""></a>
+                <a href=""><img src="img/yt.svg" alt=""></a>
+            </div>
+
+            <div class="pays">
+                <a href=""><img src="img/bancolombia.png" alt=""></a>
+                <a href=""><img src="img/davivienda.png" alt=""></a>
+                <a href=""><img src="img/grupoaval.png" alt=""></a>
+                <a href=""><img src="img/mastercard.png" alt=""></a>
+                <a href=""><img src="img/nequi.png" alt=""></a>
+                <a href=""><img src="img/paypal.png" alt=""></a>
+                <a href=""><img src="img/pse.png" alt=""></a>
+                <a href=""><img src="img/visa.png" alt=""></a>
+            </div>
+        </div>
+        <div class="bottomf">
+            <div class="footer-column">
+                <h3>Nuestra Compañía</h3>
+                <ul>
+                <li><a href="#">Quiénes somos</a></li>
+                <li><a href="#">Nuestras tiendas</a></li>
+                <li><a href="#">Nuestras marcas</a></li>
+                <li><a href="#">Contáctenos</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+                <li><a href="#">Tarjeta de crédito Alkosto</a></li>
+                <li><a href="#">Certificados tributarios</a></li>
+                <li><a href="#">Rifas</a></li>
+                <li><a href="#">Fondo de empleados y cooperativas</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Compras en línea</h3>
+                <ul>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Pago seguro</a></li>
+                <li><a href="#">Métodos de envío</a></li>
+                <li><a href="#">Medios de pago</a></li>
+                <li><a href="#">Seguros</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Servicios</h3>
+                <ul>
+                <li><a href="#">Instalaciones</a></li>
+                <li><a href="#">Agendar servicio de instalación</a></li>
+                <li><a href="#">Garantía extendida</a></li>
+                <li><a href="#">Garantías y centros de servicios técnico</a></li>
+                <li><a href="#">Instalación de Llantas</a></li>
+                <li><a href="#">Consulta tu factura</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Políticas</h3>
+                <ul>
+                <li><a href="#">Términos y condiciones del canal digital</a></li>
+                <li><a href="#">Contrato de compraventa en línea</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Solicitud tratamiento de datos personales</a></li>
+                <li><a href="#">Política de cookies</a></li>
+                <li><a href="#">Política de cambios y devoluciones</a></li>
+                <li><a href="#">Código de ética</a></li>
+                <li><a href="#">Manual de normas SST para Terceros</a></li>
+                <li><a href="#">Línea ética</a></li>
+                <li><a href="#">Superintendencia de Industria y Comercio - SIC</a></li>
+                </ul>
+            </div>              
+        </div>
+       
+    </footer>
 </body>
 </html>
