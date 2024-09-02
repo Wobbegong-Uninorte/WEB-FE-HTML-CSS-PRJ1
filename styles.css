@@ -1839,4 +1839,13 @@ main {
     margin-top: 10px;
   }
 
+  .bread {
+    margin-left: 0;
+    color: white;
+  }
+  
+  .bread:hover{
+    color: #a793f7;
+  }
+
 }
