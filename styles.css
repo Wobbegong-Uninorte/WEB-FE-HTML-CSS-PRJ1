@@ -1364,7 +1364,7 @@ body {
 .filtros {
   position: fixed;
   top: 0;
-  left: -300px;
+  left: -425px;
   width: 22.7%;
   height: calc(100% - 40px);
   background-color: #2d1d6b;
