@@ -16,6 +16,23 @@ body {
   background-color: #f4f4f4;
 }
 
+.logo {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #5c74e0;
+}
+
+
 .header{
   background-color: #4C37C0;
   display: flex;
