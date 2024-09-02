@@ -1369,7 +1369,7 @@ body {
 .filtros {
   position: fixed;
   top: 0;
-  left: -300px;
+  left: -425px;
   width: 22.7%;
   height: calc(100% - 40px);
   background-color: #2d1d6b;
@@ -1770,6 +1770,10 @@ body {
   margin: 0.2% 0.2%;
   width: auto;
   max-width: 100%;
+  border:rgb(172, 33, 227) 1px solid;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
 }
 
 .breadc p {
