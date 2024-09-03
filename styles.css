@@ -1321,9 +1321,9 @@ body {
 
 /* Button to open filters */
 .btn-open {
-  position: fixed;
-  top: 19em;
-  left: 41px;
+  /* position: fixed; */
+  top: 270px;
+  left: 0;
   padding: 10px 20px;
   background-color: #131921;
   color: white;
@@ -1352,7 +1352,7 @@ body {
 .filtros {
   position: fixed;
   top: 0;
-  left: -425px;
+  left: 100%;
   width: 22.7%;
   height: calc(100% - 40px);
   background-color: #2d1d6b;
@@ -1600,7 +1600,7 @@ body {
   .filtros {
     position: fixed;
     top: 0;
-    left: -14.5em;
+    left: -100%;
     width: 22.7%;
     height: calc(100% - 40px);
     background-color: #2d1d6b;
@@ -1908,6 +1908,10 @@ a {
   margin: 0;
 }
 
+.breadc a {
+  color:#000;
+}
+
 .product-spot {
   display: flex;
   width: 100%;
@@ -2153,83 +2157,6 @@ a {
   color: #ffffff;
 }
 
-/* Footer Section */
-
-.footer {
-  grid-area: footer;
-  background: linear-gradient(0deg, #4c37c0 0%, #5536b9 97%, #ffffff 100%);
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  color: #ffffff;
-  padding-top: 10px;
-}
-
-.topf {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  padding: 10px;
-  padding-top: 20px;
-}
-
-.contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 5px;
-}
-
-.contact img {
-  width: auto;
-  height: 30px;
-}
-
-.bottomf {
-  display: flex;
-  justify-content: space-around;
-  border-top: 1px solid #ffffff;
-  padding: 10px 10px;
-}
-
-.pays {
-  display: flex;
-  flex-wrap: wrap;
-  justify-self: end;
-  text-align: right;
-  gap: 20px;
-  max-width: 350px;
-}
-
-.pays img {
-  width: auto;
-  height: 35px;
-}
-
-.footer-column h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 10px;
-}
-
-.footer-column ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  text-align: justify;
-}
-
-.footer-column ul li a:hover {
-  color: #192641;
-}
 /* Responsive Design */
 
 @media (max-width: 768px) {
@@ -2264,11 +2191,13 @@ a {
     max-width: 100%;
     margin: 15px 0;
   }
-}
-  
+
   .bread:hover{
     color: #8c71f5;
   }
 
 }
+  
+
+
 
